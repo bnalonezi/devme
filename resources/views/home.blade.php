@@ -57,18 +57,19 @@
                                 <div class="row justify-content-center">
                                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">تسجيل الدخول</p>
-                                    <form class="mx-1 mx-md-4">
+                                    <form class="mx-1 mx-md-4" action="login" method="POST">
+                                        @csrf
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                        <input type="email" id="form3Example3c" class="form-control" />
+                                        <input type="email" name="email" id="form3Example3c" class="form-control" />
                                         <label class="form-label" for="form3Example3c">البريد الالكتروني </label>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                        <input type="password" id="form3Example4c" class="form-control" />
+                                        <input type="password" name="pass" id="form3Example4c" class="form-control" />
                                         <label class="form-label" for="form3Example4c">كلمة المرور</label>
                                         </div>
                                     </div>
@@ -79,7 +80,7 @@
                                     </div>
                                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">إلغاء</button>
-                                        <button type="button" class="btn btn-primary btn-lg">تم</button>
+                                        <button type="submit" class="btn btn-primary btn-lg">تم</button>
                                     </div>
                                 </form>
                                 </div>
@@ -111,11 +112,24 @@
                     <div class="card-body p-4 p-md-5">
                         <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
 
-                        <form class="px-md-2">
+                        <form class="px-md-2" action="register" method="POST">
+                            @csrf
 
                         <div class="form-outline mb-4">
-                            <input type="text" id="form3Example1q" class="form-control" />
+                            <input type="text" name="name" id="form3Example1q" class="form-control" />
                             <label class="form-label" for="form3Example1q">Name</label>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <input type="text" name="username" id="form3Example1q" class="form-control" />
+                            <label class="form-label" for="form3Example1q">Username</label>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <input type="email" name="email" id="form3Example1q" class="form-control" />
+                            <label class="form-label" for="form3Example1q">Email</label>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <input type="password" name="pass" id="form3Example1q" class="form-control" />
+                            <label class="form-label" for="form3Example1q">Password</label>
                         </div>
 
                         <div class="row">
@@ -133,12 +147,13 @@
                             </div>
                             <div class="col-md-6 mb-4">
 
-                            <select class="select">
-                                <option value="1" disabled>Gender</option>
-                                <option value="2">Female</option>
-                                <option value="3">Male</option>
-                                <option value="4">Other</option>
+
+                            <select class="select" name="city_id">
+                                @foreach($cities as $city)
+                                <option value="{{$city->id}}"> {{$city->name}} </option>
+                                @endforeach
                             </select>
+
 
                             </div>
                         </div>

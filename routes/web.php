@@ -21,6 +21,10 @@ Route::get('/', [HomeController::class, 'getHome']);
 
 Route::get('/welcome',  [HomeController::class, 'test']);
 
+Route::post('/login',  [HomeController::class, 'postLogin']);
+
+Route::post('/register',  [HomeController::class, 'postRegister']);
+
 Route::get('/test-blade',  function () {
     return view('content');
 });
