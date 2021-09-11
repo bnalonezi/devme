@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
 <style>
     body {font-family: "Times New Roman", Georgia, Serif;}
     h1, h2, h3, h4, h5, h6 {
@@ -16,94 +25,177 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-        <a href="#home" class="w3-bar-item w3-button">Gourmet au Catering</a>
+        <a href="#home" class="w3-bar-item w3-button">DivWithMe</a>
         <!-- Right-sided navbar links. Hide them on small screens -->
         <div class="w3-right w3-hide-small">
-            <a href="#about" class="w3-bar-item w3-button">About</a>
-            <a href="#menu" class="w3-bar-item w3-button">Menu</a>
-            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+            <a href="#project" class="w3-bar-item w3-button">إنشاء مشروع</a>
+            <a href="#about" class="w3-bar-item w3-button">من نحن</a>
+            <!-- Button trigger modal -->
+            <a type="button"  data-toggle="modal" data-target=".bd-example-modal-lg" class="w3-bar-item w3-button">تسجيل الدخول</a>
         </div>
     </div>
 </div>
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-    <img class="w3-image" src="/w3images/hamburger.jpg" alt="Hamburger Catering" width="1600" height="800">
+    <img class="w3-image" src="/images/devwithme_logo.png" alt="Hamburger Catering" width="1600" height="100">
     <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-        <h1 class="w3-xxlarge">Le Catering</h1>
     </div>
 </header>
 
 <!-- Page content -->
+<!-- login Modal -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <section class="vh-100" style="background-color: #eee;">
+                <div class="container h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-lg-12 col-xl-11">
+                            <div class="card text-black" style="border-radius: 25px;">
+                            <div class="card-body p-md-5">
+                                <div class="row justify-content-center">
+                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">تسجيل الدخول</p>
+                                    <form class="mx-1 mx-md-4">
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                        <input type="email" id="form3Example3c" class="form-control" />
+                                        <label class="form-label" for="form3Example3c">البريد الالكتروني </label>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                        <input type="password" id="form3Example4c" class="form-control" />
+                                        <label class="form-label" for="form3Example4c">كلمة المرور</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-center mb-5">
+                                        <label type="button"  data-toggle="modal" data-target=".bd-example-modal-lg" class="w3-bar-item w3-button"class="form-check-label" for="form2Example3">
+                                        ليس لديك حساب؟<a type="button"  data-toggle="modal" data-target=".bd-example-modal-lg2" href="#!">تسجيل جديد</a>
+                                        </label>
+                                    </div>
+                                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">إلغاء</button>
+                                        <button type="button" class="btn btn-primary btn-lg">تم</button>
+                                    </div>
+                                </form>
+                                </div>
+                                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                                    <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-registration/draw1.png" class="img-fluid" alt="Sample image">
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </section>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <section class="h-100 h-custom" style="background-color: #8fc4b7;">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="card rounded-3">
+                    <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-registration/img3.jpg" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;" alt="Sample photo">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
+
+                        <form class="px-md-2">
+
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form3Example1q" class="form-control" />
+                            <label class="form-label" for="form3Example1q">Name</label>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+
+                            <div class="form-outline datepicker">
+                                <input
+                                type="text"
+                                class="form-control"
+                                id="exampleDatepicker1"
+                                />
+                                <label for="exampleDatepicker1" class="form-label">Select a date</label>
+                            </div>
+
+                            </div>
+                            <div class="col-md-6 mb-4">
+
+                            <select class="select">
+                                <option value="1" disabled>Gender</option>
+                                <option value="2">Female</option>
+                                <option value="3">Male</option>
+                                <option value="4">Other</option>
+                            </select>
+
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+
+                            <select class="select">
+                            <option value="1" disabled>Class</option>
+                            <option value="2">Class 1</option>
+                            <option value="3">Class 2</option>
+                            <option value="4">Class 3</option>
+                            </select>
+
+                        </div>
+
+                        <div class="row mb-4 pb-2 pb-md-0 mb-md-5">
+                            <div class="col-md-6">
+
+                            <div class="form-outline">
+                                <input type="text" id="form3Example1w" class="form-control" />
+                                <label class="form-label" for="form3Example1w">Registration code</label>
+                            </div>
+
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
+
+                        </form>
+
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+
+        </div>
+    </div>
+</div>
+
 <div class="w3-content" style="max-width:1100px">
 
     <div class="container">
         @yield('content')
     </div>
     <!-- About Section -->
-{{--    <div class="w3-row w3-padding-64" id="about">--}}
-{{--        <div class="w3-col m6 w3-padding-large w3-hide-small">--}}
-{{--            <img src="/w3images/tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">--}}
-{{--        </div>--}}
-
-{{--        <div class="w3-col m6 w3-padding-large">--}}
-{{--            <h1 class="w3-center">About Catering</h1><br>--}}
-{{--            <h5 class="w3-center">Tradition since 1889</h5>--}}
-{{--            <p class="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p>--}}
-{{--            <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-
-{{--    <hr>--}}
-
-{{--    <!-- Menu Section -->--}}
-{{--    <div class="w3-row w3-padding-64" id="menu">--}}
-{{--        <div class="w3-col l6 w3-padding-large">--}}
-{{--            <h1 class="w3-center">Our Menu</h1><br>--}}
-{{--            <h4>Bread Basket</h4>--}}
-{{--            <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>--}}
-
-{{--            <h4>Honey Almond Granola with Fruits</h4>--}}
-{{--            <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>--}}
-
-{{--            <h4>Belgian Waffle</h4>--}}
-{{--            <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>--}}
-
-{{--            <h4>Scrambled eggs</h4>--}}
-{{--            <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>--}}
-
-{{--            <h4>Blueberry Pancakes</h4>--}}
-{{--            <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>--}}
-{{--        </div>--}}
-
-{{--        <div class="w3-col l6 w3-padding-large">--}}
-{{--            <img src="/w3images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">--}}
-{{--        </div>--}}
-{{--    </div>--}}
-
-{{--    <hr>--}}
-
-{{--    <!-- Contact Section -->--}}
-{{--    <div class="w3-container w3-padding-64" id="contact">--}}
-{{--        <h1>Contact</h1><br>--}}
-{{--        <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>--}}
-{{--        <p class="w3-text-blue-grey w3-large"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p>--}}
-{{--        <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>--}}
-{{--        <form action="/action_page.php" target="_blank">--}}
-{{--            <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>--}}
-{{--            <p><input class="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"></p>--}}
-{{--            <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>--}}
-{{--            <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>--}}
-{{--            <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>--}}
-{{--        </form>--}}
-{{--    </div>--}}
-
-{{--    <!-- End page content -->--}}
+    <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+    </div>
+    من نحن
+    </div>
 </div>
 
 <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-32">
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    <p>كافة الحقوق محفوظة <a href="#" title="W3.CSS" target="_blank" class="w3-hover-text-green">DivWithMe</a></p>
 </footer>
 
 </body>
